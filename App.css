@@ -1,0 +1,265 @@
+#App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  font-family: 'Inter', 'Arial', sans-serif; /* Modern font */
+  background: linear-gradient(135deg, #f0f2f5, #e4e7ec); /* Subtle gradient */
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.navbar {
+  width: 100%;
+  background: rgba(17, 24, 39, 0.95); /* Dark, semi-transparent */
+  backdrop-filter: blur(12px); /* Glassmorphism */
+  color: #f3f4f6;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar:hover {
+  background: rgba(31, 41, 55, 0.95);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.025em; /* Tightened spacing for modern look */
+  background: linear-gradient(90deg, #60a5fa, #3b82f6); /* Gradient text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar:hover h1 {
+  transform: scale(1.02); /* Subtle hover animation */
+}
+
+.navbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Modern spacing */
+}
+
+.navbar-controls input {
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #f3f4f6;
+  font-size: 1rem;
+  font-weight: 400;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 200px; /* Fixed width for consistency */
+}
+
+.navbar-controls input::placeholder {
+  color: rgba(209, 213, 219, 0.7); /* Subtle placeholder */
+}
+
+.navbar-controls input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #60a5fa; /* Highlight on focus */
+  box-shadow: 0 0 8px rgba(96, 165, 250, 0.3); /* Glow effect */
+}
+
+.navbar-controls input:hover:not(:focus) {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-controls button {
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa); /* Gradient button */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-controls button:hover {
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-controls button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.toolbar {
+  margin: 24px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.8); /* Glassmorphism */
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toolbar:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.toolbar button {
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa); /* Gradient button */
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.toolbar button:hover {
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.toolbar button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Modern File Input */
+.file-input {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  color: #fff;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.file-input:hover {
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.file-input:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.file-input input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.canvas {
+  position: relative;
+  width: 85%;
+  height: 550px;
+  border: 2px dashed #9ca3af;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  margin-top: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.canvas:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  border-color: #6b7280;
+}
+
+.image-element,
+#text-element {
+  position: absolute;
+  cursor: grab;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-element img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.image-element:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.text-element {
+  cursor: text;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-element input {
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1f2937;
+  border: none;
+  outline: none;
+  background: transparent;
+  pointer-events: all;
+}
+
+.text-element:hover {
+  background: rgba(243, 244, 246, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.text-element:focus-within {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+.text-style-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.text-style-controls label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
